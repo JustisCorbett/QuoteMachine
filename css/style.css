@@ -1,0 +1,50 @@
+﻿body {
+    background-image: url("../img/seamlesspapertexture.png");
+   
+    font-family: Roboto, Arial;
+}
+.container-site {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+.container-title{
+    display: flex;
+    justify-content: center;
+}
+.title-text{
+    font-size: 7.6em;
+}
+.container-quote {
+    background-image: url("../img/paperfibers.png");
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 3.375em;
+    font-family: Indie Flower, Verdana;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 20px;
+}
+@media screen and (max-width: 960px) {
+    .title-text {
+        font-size: 5em;
+    }
+    .container-quote {
+        font-size: 2.25em;
+    }
+}
+@media screen and (max-width: 480px) {
+    .title-text {
+        font-size: 3.375em;
+    }
+    .container-quote {
+        font-size: 1.5em;
+    }
+}
