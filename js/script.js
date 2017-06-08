@@ -9,6 +9,8 @@ $(document).ready(function(){
         		var post = data.shift(); // The data is an array of posts. Grab the first one.
        			$( '#author' ).html("<p>&mdash; " + post.title + "</p>");
        			$( '#quotes' ).html( post.content );
+						var quote = post.content;
+						var author = ("&mdash; " + post.title);
 					 },
 					 cache: false
 				});
@@ -21,6 +23,6 @@ $('#newQuote').on('click', function(event){
 });
 $('#tweetQuote').on('click', function(event){
 		event.preventDefault();
-		window.open("https://twitter.com/intent/tweet?text=" + $( '#quotes' ).html + '#author' + " &hashtags=design");
+		window.open("https://twitter.com/intent/tweet?text=" + quote + author + " &hashtags=design");
 })
 })
