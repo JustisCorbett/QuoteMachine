@@ -7,8 +7,8 @@ $(document).ready(function(){
 					dataType: 'json',
 					 success: function ( data ) {
         		var post = data.shift(); // The data is an array of posts. Grab the first one.
-       			$( '#author' ).text( post.title );
-       			$( '#quotes' ).html("- " + post.content );
+       			$( '#author' ).text("- " + post.title );
+       			$( '#quotes' ).html( post.content );
 					 },
 					 cache: false
 				});
