@@ -19,4 +19,8 @@ $('#newQuote').on('click', function(event){
 		event.preventDefault();
 		getNewQuote();
 });
+$('#tweetQuote').on('click', function(event){
+		event.preventDefault();
+		window.open("https://twitter.com/intent/tweet?text=" + '#quotes' + '#author' + " &hashtags=design");
+})
 })
