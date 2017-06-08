@@ -15,5 +15,8 @@ $(document).ready(function(){
 			};
 
     getNewQuote();
-
+$('#newQuote').on('click', function(event){
+		event.preventDefault();
+		getNewQuote();
+});
 })
