@@ -30,8 +30,8 @@
     border-radius: 5px;
     padding: 20px;
 }
-.container-button{
-    font-size: 5em;
+.btn{
+    font-size: 2.25em;
 }
 @media screen and (max-width: 960px) {
     .title-text {
