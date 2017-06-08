@@ -21,6 +21,6 @@ $('#newQuote').on('click', function(event){
 });
 $('#tweetQuote').on('click', function(event){
 		event.preventDefault();
-		window.open("https://twitter.com/intent/tweet?text=" + '#quotes' + '#author' + " &hashtags=design");
+		window.open("https://twitter.com/intent/tweet?text=" + $( '#quotes' ).html + '#author' + " &hashtags=design");
 })
 })
