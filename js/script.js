@@ -25,6 +25,6 @@ $('#newQuote').on('click', function(event){
 });
 $('#tweetQuote').on('click', function(event){
 		event.preventDefault();
-		window.open("https://twitter.com/intent/tweet?text=" + quote + " &hashtags=design");
+		window.open("https://twitter.com/intent/tweet?text=" + $('#quotes').textContent + " &hashtags=design");
 })
 })
