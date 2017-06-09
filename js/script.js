@@ -12,7 +12,7 @@ $(document).ready(function(){
        			  $( '#author' ).html("<p>&mdash; " + post.title + "</p>");
        			  $( '#quotes' ).html( post.content );
 						  quote = $('#quotes').textContent;
-						  
+						  console.log(quote);
 					 },
 					 cache: false
 				});
@@ -25,6 +25,6 @@ $('#newQuote').on('click', function(event){
 });
 $('#tweetQuote').on('click', function(event){
 		event.preventDefault();
-		window.open("https://twitter.com/intent/tweet?text=" + $('.p').textContent + " &hashtags=design");
+		window.open("https://twitter.com/intent/tweet?text=" + quote + " &hashtags=design");
 })
 })
