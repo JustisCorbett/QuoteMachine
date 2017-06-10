@@ -11,7 +11,7 @@ $(document).ready(function(){
         		  var post = data.shift(); // The data is an array of posts. Grab the first one.
        			  $( '#author' ).html("<p>&mdash; " + post.title + "</p>");
        			  $( '#quotes' ).html( post.content );
-						  quote = $('#quotes').textContent;
+						  quote = $('p').contents().unwrap();
 						  console.log(quote);
 					 },
 					 cache: false
