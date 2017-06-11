@@ -9,7 +9,8 @@ $(document).ready(function(){
 					dataType: 'json',
 					  success: function ( data ) {
         		  var post = data.shift(); // The data is an array of posts. Grab the first one.
-							quote = post.content.find("p").each(function() { $(this).replaceWith(this.childNodes); });
+							var tempQuote = post.content;
+							quote = tempQuote.find("p").each(function() { $(this).replaceWith(this.childNodes); });
 							author = "&mdash; " + post.title;
        			  $( '#author' ).html( author );
        			  $( '#quotes' ).html( quote );
