@@ -9,9 +9,10 @@ $(document).ready(function(){
 					dataType: 'json',
 					  success: function ( data ) {
         		  var post = data.shift(); // The data is an array of posts. Grab the first one.
-       			  $( '#author' ).html("<p>&mdash; " + post.title + "</p>");
-       			  $( '#quotes' ).html( post.content );
-						  quote = $('p').contents().unwrap();
+							quote = post.content.find("p").each(function() { $(this).replaceWith(this.childNodes); });
+       			  $( '#author' ).html("&mdash; " + post.title );
+       			  $( '#quotes' ).html( quote );
+						  
 						  console.log(quote);
 					 },
 					 cache: false
