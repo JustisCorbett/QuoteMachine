@@ -10,7 +10,8 @@ $(document).ready(function(){
 					  success: function ( data ) {
         		  var post = data.shift(); // The data is an array of posts. Grab the first one.
 							quote = post.content.find("p").each(function() { $(this).replaceWith(this.childNodes); });
-       			  $( '#author' ).html("&mdash; " + post.title );
+							author = "&mdash; " + post.title;
+       			  $( '#author' ).html( author );
        			  $( '#quotes' ).html( quote );
 						  
 						  console.log(quote);
