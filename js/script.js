@@ -9,8 +9,8 @@ $(document).ready(function(){
 					dataType: 'json',
 					  success: function ( data ) {
         		  var post = data.shift(); // The data is an array of posts. Grab the first one.
-							var $tempQuote = post.content;
-							quote = post.content; //remove p tags
+							var tempQuote = post.content;
+							quote = tempQuote.replace(/(<p[^>]+?>|<p>|<\/p>)/img, "");; //remove p tags
 							author = "&mdash; " + post.title;
        			  $( '#author' ).html( author );
        			  $( '#quotes' ).html( quote );
