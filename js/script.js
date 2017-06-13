@@ -14,8 +14,6 @@ $(document).ready(function(){
 				author = "&mdash; " + post.title;
        			$( '#author' ).html( author );
        			$( '#quotes' ).html( quote );
-				formQuote = ($("#quotes").text()); //get formatted text with no unicode.
-				console.log (formQuote);
 				},
 				cache: false
 				});
@@ -28,6 +26,7 @@ $('#newQuote').on('click', function(event){
 });
 $('#tweetQuote').on('click', function(event){
 		event.preventDefault();
+		var formQuote = ($("#quotes").text()); //get formatted text with no unicode.
 		window.open("https://twitter.com/intent/tweet?text=" + formQuote + " &hashtags=design");
 })
 })
