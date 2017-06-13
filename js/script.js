@@ -15,7 +15,7 @@ $(document).ready(function(){
        			$( '#author' ).html( author );
        			$( '#quotes' ).html( quote );
 				
-				console.log(quote);
+				console.log ($("#quotes").text());
 				},
 				cache: false
 				});
