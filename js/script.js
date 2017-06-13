@@ -14,7 +14,7 @@ $(document).ready(function(){
 				author = "&mdash; " + post.title;
        			$( '#author' ).html( author );
        			$( '#quotes' ).html( quote );
-				var formQuote = $("#quotes").text(); //get formatted text with no unicode.
+				formQuote = ($("#quotes").text()); //get formatted text with no unicode.
 				console.log (formQuote);
 				},
 				cache: false
