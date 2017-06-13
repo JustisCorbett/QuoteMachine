@@ -14,8 +14,8 @@ $(document).ready(function(){
 				author = "&mdash; " + post.title;
        			$( '#author' ).html( author );
        			$( '#quotes' ).html( quote );
-				
-				console.log ($("#quotes").text());
+				var tweetQuote = $("#quotes").text(); //get formatted text with no unicode.
+				console.log (tweetQuote);
 				},
 				cache: false
 				});
@@ -28,6 +28,6 @@ $('#newQuote').on('click', function(event){
 });
 $('#tweetQuote').on('click', function(event){
 		event.preventDefault();
-		window.open("https://twitter.com/intent/tweet?text=" + quote + " &hashtags=design");
+		window.open("https://twitter.com/intent/tweet?text=" + tweetQuote + " &hashtags=design");
 })
 })
