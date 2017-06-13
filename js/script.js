@@ -4,20 +4,20 @@ $(document).ready(function(){
 	var author;
     function getNewQuote(){
         $.ajax({
-					url: 'https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1',
+			url: 'https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1',
 					
-					dataType: 'json',
-					  success: function ( data ) {
-        		  var post = data.shift(); // The data is an array of posts. Grab the first one.
-							var tempQuote = post.content;
-							quote = tempQuote.replace(/(<p[^>]+?>|<p>|<\/p>)/img, "");; //remove p tags
-							author = "&mdash; " + post.title;
-       			  $( '#author' ).html( author );
-       			  $( '#quotes' ).html( quote );
-						  
-						  console.log(quote);
-					 },
-					 cache: false
+			dataType: 'json',
+			success: function ( data ) {
+        		var post = data.shift(); // The data is an array of posts. Grab the first one.
+				var tempQuote = post.content;
+				quote = tempQuote.replace(/(<p[^>]+?>|<p>|<\/p>)/img, ""); //remove p tags
+				author = "&mdash; " + post.title;
+       			$( '#author' ).html( author );
+       			$( '#quotes' ).html( quote );
+				
+				console.log(quotes);
+				},
+				cache: false
 				});
 			};
 
